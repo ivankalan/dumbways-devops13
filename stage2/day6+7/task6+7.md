@@ -75,18 +75,46 @@ Lalu run file `.yaml` yang sudah dibuat tadi menggunakan ansible playbook dengan
 
 ## Install Monitoring App using Ansible with Docker
 
-Untuk monitoring, disini saya menggunakan 4 aplikasi yaitu node exporter, prometheus, grafana, dan cadvisor. Masing" dari aplikasi mempunyai tugas yang berbeda, node exporter untuk mengambil data metrics dari server, cadvisor untuk mengambil data metrics dari container, prometheus untuk memonitoring sistem menggunakan data metrics yang sudah diambil, dan grafana sebagai visual dari prometheus yang menampilkan dashboard berisi data" metrics 
+Untuk monitoring, disini saya menggunakan 4 aplikasi yaitu node exporter, prometheus, grafana, dan cadvisor. Masing" dari aplikasi mempunyai tugas yang berbeda, node exporter untuk mengambil data metrics dari server, cadvisor untuk mengambil data metrics dari container, prometheus untuk memonitoring sistem menggunakan data metrics yang sudah diambil, dan grafana sebagai visual dari prometheus yang menampilkan dashboard berisi data" metrics yang sudah dikumpulkan.
 
+Pertama, buat dulu file `.yaml` sebagai wadah untuk menginstall aplikasi, lalu ketikkan konfigurasi seperti ini
 
+![Screenshot from 2022-09-25 16-12-42](https://user-images.githubusercontent.com/56712612/192136441-8ec012a1-1c8e-4d7e-9b1d-71ab8deb2921.png)
 
+![Screenshot from 2022-09-25 16-12-57](https://user-images.githubusercontent.com/56712612/192136443-b3d9a54d-411a-4535-aee0-3c251354d2af.png)
 
+Lalu jalankan file `.yaml` yang sudah dibuat tadi menggunakan ansible playbook
 
+Lalu setelah berhasil di install, buka aplikasi di browser menggunakan alamat IP dari server dan port aplikasi
+  - node exporter: 9100
+  - prometheus: 3100 (default port 9090)
+  - grafana: 3000
+  - cadvisor: 8080
 
+## Make reverse proxy
 
+Lakukan konfigurasi reverse proxy sama seperti biasanya dan atur dns name nya seperti ini
 
+![Screenshot from 2022-09-25 16-28-52](https://user-images.githubusercontent.com/56712612/192137016-1f4ddf2b-0dbb-4d89-97ee-9e2e26b669fe.png)
 
+## Additional
 
+Setelah reverse proxy berhasil dibuat, sekarang setup grafana agar dapat membaca metrics dari prometheus, pertama buka grafana dan klik "Add a New Data Source" dan pilih Prometheus lalu klik save.
 
+Setelah itu import dashboard dari library dashboard milik grafana agar kita tidak perlu repot" setup dari awal.
 
+Pertama buka grafana dashboard 
 
+![Screenshot from 2022-09-25 16-41-54](https://user-images.githubusercontent.com/56712612/192137413-47b257b7-ce78-45bc-850a-4715af5424e0.png)
 
+Lalu cari dashboard `node exporter full` dan `cadvisor exporter`
+
+![Screenshot from 2022-09-25 16-46-18](https://user-images.githubusercontent.com/56712612/192137566-f2c94941-e1dd-483c-96c7-9d3cee590093.png)
+
+![Screenshot from 2022-09-25 16-46-50](https://user-images.githubusercontent.com/56712612/192137569-83152c67-0556-4ad8-a866-e55f47c86eff.png)
+
+Setelah itu scroll kebawah dan copy ID dari masing" dashboard
+
+![Screenshot from 2022-09-25 16-47-03](https://user-images.githubusercontent.com/56712612/192137602-919fbf35-ce79-423d-8c23-210453e5e873.png)
+
+Lalu buka grafana dan pilih import dashboard dan paste ID dari dashboard yang sudah di copy tadi
