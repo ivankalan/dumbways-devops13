@@ -17,4 +17,4 @@
 - Day 5 : [CI/CD Jenkins](https://github.com/ivankalan/dumbways-devops13-kel2)
 - Day 6 : [Monitoring Server](https://github.com/ivankalan/dumbways-devops13/tree/master/stage2/day6%2B7)
 - Day 7 : [Automation Ansible](https://github.com/ivankalan/dumbways-devops13/tree/master/stage2/day6%2B7)
-- Day 8 : [Kubernetes]
+- Day 8 : Kubernetes
