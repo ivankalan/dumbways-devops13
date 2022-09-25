@@ -73,9 +73,9 @@ Lalu run file `.yaml` yang sudah dibuat tadi menggunakan ansible playbook dengan
 
 ![Screenshot from 2022-09-21 15-36-49](https://user-images.githubusercontent.com/56712612/192135001-435fca4d-9790-49c7-a589-1dcb4400cf39.png)
 
+## Install Monitoring App using Ansible with Docker
 
-
-
+Untuk monitoring, disini saya menggunakan 4 aplikasi yaitu node exporter, prometheus, grafana, dan cadvisor. Masing" dari aplikasi mempunyai tugas yang berbeda, node exporter untuk mengambil data metrics dari server, cadvisor untuk mengambil data metrics dari container, prometheus untuk memonitoring sistem menggunakan data metrics yang sudah diambil, dan grafana sebagai visual dari prometheus yang menampilkan dashboard berisi data" metrics 
 
 
 
