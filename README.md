@@ -12,9 +12,9 @@
 ### Stage 2
 - Day 1 : [Cloud Computing with IDCloudHost](https://github.com/ivankalan/dumbways-devops13/tree/master/stage2/day1)
 - Day 2 : [Manage Database and Backend Setup](https://github.com/ivankalan/dumbways-devops13/tree/master/stage2/day2)
-- Day 3 : [Docker]
-- Day 4 : [Docker Swarm]
-- Day 5 : [CI/CD Jenkins]
-- Day 6 : [Monitoring Server]
-- Day 7 : [Automation Ansible]
+- Day 3 : [Docker](https://github.com/ivankalan/dumbways-devops13-kel2)
+- Day 4 : Docker Swarm
+- Day 5 : [CI/CD Jenkins](https://github.com/ivankalan/dumbways-devops13-kel2)
+- Day 6 : [Monitoring Server](https://github.com/ivankalan/dumbways-devops13/tree/master/stage2/day6%2B7)
+- Day 7 : [Automation Ansible](https://github.com/ivankalan/dumbways-devops13/tree/master/stage2/day6%2B7)
 - Day 8 : [Kubernetes]
