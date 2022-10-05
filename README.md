@@ -18,3 +18,6 @@
 - Day 6 : [Monitoring Server](https://github.com/ivankalan/dumbways-devops13/tree/master/stage2/day6%2B7)
 - Day 7 : [Automation Ansible](https://github.com/ivankalan/dumbways-devops13/tree/master/stage2/day6%2B7)
 - Day 8 : Kubernetes
+
+### Final task
+- [Final task repo](https://github.com/ivankalan/devops13-finaltask)
